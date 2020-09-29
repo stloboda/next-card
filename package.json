@@ -5,11 +5,18 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "serve": "concurrently \"npm run dev\" \"npm run server\"",
+    "server": "json-server -w api/db.json -p 5800"
   },
   "dependencies": {
+    "@material-ui/core": "^4.11.0",
+    "@material-ui/icons": "^4.9.1",
     "next": "9.5.3",
     "react": "16.13.1",
     "react-dom": "16.13.1"
+  },
+  "devDependencies": {
+    "concurrently": "^5.3.0"
   }
 }
